@@ -3,8 +3,10 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import styles from './WelcomeStyles'
+import { useNavigation } from '@react-navigation/native';
 
 export default function WelcomeScreen() {
+  const navigation = useNavigation()
   return (
     <View style={styles.main}>
 
@@ -19,7 +21,7 @@ export default function WelcomeScreen() {
             start={{x: 0.5, y: 0}}
             end={{x: 0.5, y: 1}}
         />
-        <View style={styles.texts}>
+        <View>
           <Text style={styles.texts_title}>
             Viajar agora é fácil!
           </Text>
@@ -27,7 +29,7 @@ export default function WelcomeScreen() {
             Experimente as melhores aventuras ao redor do mundo com a gente
           </Text>
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.button}>
           <Text style={styles.button_text}>
             Vamos Lá!
           </Text>
