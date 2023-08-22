@@ -12,11 +12,11 @@ export default function WelcomeScreen() {
 
       <View style={styles.container}>
         <View style={styles.texts}>
-          <Text style={styles.title}>
+          <Text style={styles.texts_title}>
             Viajar agora é fácil!
           </Text>
-          <Text style={styles.description}>
-            Experimente das as melhores aventuras ao redor do mundo com a gente
+          <Text style={styles.texts_description}>
+            Experimente as melhores aventuras ao redor do mundo com a gente
           </Text>
         </View>
         <TouchableOpacity style={styles.button}>
