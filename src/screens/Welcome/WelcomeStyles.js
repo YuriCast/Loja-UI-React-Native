@@ -18,12 +18,6 @@ const WelcomeStyles = StyleSheet.create({
         paddingBottom: 40,
         gap: 32
     },
-    linear_gadient:{
-        position: 'absolute',
-        bottom: 0,
-        width: wp(100),
-        height: hp(60)
-    },
     texts_title:{
         color: 'white',
         fontWeight: '700',
