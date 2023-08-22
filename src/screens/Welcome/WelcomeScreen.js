@@ -1,5 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { LinearGradient } from 'expo-linear-gradient'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import styles from './WelcomeStyles'
 
 export default function WelcomeScreen() {
@@ -11,6 +13,12 @@ export default function WelcomeScreen() {
       />
 
       <View style={styles.container}>
+      <LinearGradient
+            colors={['transparent', 'rgba(3,105,161,0.8)']}
+            style={{width: wp(100), height: hp(60), position: 'absolute', bottom: 0}}
+            start={{x: 0.5, y: 0}}
+            end={{x: 0.5, y: 1}}
+        />
         <View style={styles.texts}>
           <Text style={styles.texts_title}>
             Viajar agora é fácil!

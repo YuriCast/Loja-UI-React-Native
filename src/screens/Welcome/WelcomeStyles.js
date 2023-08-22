@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const WelcomeStyles = StyleSheet.create({
     
@@ -17,16 +18,20 @@ const WelcomeStyles = StyleSheet.create({
         paddingBottom: 40,
         gap: 32
     },
-    texts:{
-        gap: 3
+    linear_gadient:{
+        position: 'absolute',
+        bottom: 0,
+        width: wp(100),
+        height: hp(60)
     },
     texts_title:{
         color: 'white',
         fontWeight: '700',
-        fontSize: 40
+        marginBottom: 14,
+        fontSize: wp(12)
     },
     texts_description:{
-        fontSize: 18,
+        fontSize: wp(4),
         color: '#f1f1f1',
         fontWeight: '500'
     },
@@ -41,7 +46,8 @@ const WelcomeStyles = StyleSheet.create({
     },
     button_text:{
         color: 'white',
-        fontWeight: '700'
+        fontWeight: '700',
+        fontSize: wp(5.5)
     }
 })
 
