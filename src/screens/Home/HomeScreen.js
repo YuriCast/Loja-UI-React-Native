@@ -1,11 +1,21 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, Platform } from 'react-native'
 import React from 'react'
 import styles from './HomeStyles'
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
-      <Text>HomeScreen</Text>
+    <SafeAreaView style={styles.main}>
+      <ScrollView styles={styles.container}
+      showVerticalScrollIndicator={false}>
+        {/* avatar */}
+        <View style={styles.header}>
+          <Text style={styles.header_text}>
+            <TouchableOpacity>
+              <Image source={require('../../../assets/images/avatar.png')} style={styles.header_image}/> 
+            </TouchableOpacity>
+          </Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }
