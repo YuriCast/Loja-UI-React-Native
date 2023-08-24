@@ -10,10 +10,11 @@ export default function HomeScreen() {
         {/* avatar */}
         <View style={styles.header}>
           <Text style={styles.header_text}>
+            Let's Discover
+          </Text>
             <TouchableOpacity>
               <Image source={require('../../../assets/images/avatar.png')} style={styles.header_image}/> 
             </TouchableOpacity>
-          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
