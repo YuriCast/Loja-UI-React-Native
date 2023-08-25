@@ -13,8 +13,7 @@ export default function SearchBar() {
         <TextInput style={styles.text_input}
         placeholder='Pesquise seu destino'
         placeholderTextColor={'gray'}
-        >
-        </TextInput>
+        />
       </View>
     </View>
   )
