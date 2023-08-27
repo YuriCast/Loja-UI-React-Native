@@ -1,4 +1,4 @@
-export const sortCategoryData = ['All', 'Popular', 'Recommended', 'More'];
+export const sortCategoryData = ['Todos', 'Popular', 'Sugeridos', 'Mais'];
 
 export const categoriesData = [
     {

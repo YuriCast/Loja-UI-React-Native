@@ -35,7 +35,7 @@ const CategoriasStyles = StyleSheet.create({
         marginRight: 16,
         paddingTop: 6,
         fontWeight: '600',
-        fontSize: wp(3),
+        fontSize: wp(3)
 
     }
 })

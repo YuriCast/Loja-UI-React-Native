@@ -6,6 +6,7 @@ import styles from './HomeStyles'
 import Header from '../../components/Home/Header/Header'
 import SearchBar from '../../components/Home/SearchBar/SearchBar'
 import Categorias from '../../components/Home/Categorias/Categorias'
+import SortCategorias from '../../components/Home/SortCatetegorias/SortCategorias'
 
 export default function HomeScreen() {
   return (
@@ -17,6 +18,10 @@ export default function HomeScreen() {
 
       <View style={{marginBottom: 16}}>
       <Categorias />
+      </View>
+
+      <View style={{marginBottom: 16}}>
+      <SortCategorias />
       </View>
 
       </ScrollView>
