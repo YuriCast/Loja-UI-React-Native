@@ -16,7 +16,7 @@ export default function SortCategorias() {
         {
             sortCategoryData.map((sort, index) => {
                 const isActive = sort === activeSort;
-                const activeButtonStyle = isActive ? {styles,activeButtonStyle} : {};
+                const activeButtonStyle = isActive ? { backgroundColor: 'white', shadowColor: 'black',shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 2 } : {};
                 const textStyle = {
                     fontSize: wp(3),
                     color: isActive ? theme.text : 'rgba(0, 0, 0, 0.6)',
@@ -28,7 +28,8 @@ export default function SortCategorias() {
                         onPress={() => setActiveSort(sort)}
                         key={index}
                         style={{
-                            padding: 8,
+                            padding: 10,
+                            paddingVertical: 12,
                             borderRadius: 999,
                             ...activeButtonStyle,
                             flex: 1,
