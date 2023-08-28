@@ -1,4 +1,4 @@
-import { View, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar'
 import styles from './DestinationStyles'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-import { HeartIcon } from 'react-native-heroicons/solid'
+import { HeartIcon, MapPinIcon, SunIcon, ClockIcon } from 'react-native-heroicons/solid'
 import { ChevronLeftIcon } from 'react-native-heroicons/outline'
 
 export default function DestinationScreen(props) {
@@ -15,10 +15,13 @@ export default function DestinationScreen(props) {
   const [isFavorite, toggleFavorite] = useState(false)
 
   return (
-    <View style={styles.container}>
+    <View style={styles.main}>
+
+      {/* Destination Image */}
       <Image style={styles.image} source={item.image} />
         <StatusBar style={'light'} />
 
+      {/* Btn Voltar */}
       <SafeAreaView style={styles.btns}>
         <TouchableOpacity style={styles.voltar}
         onPress={() => navigation.goBack()}
@@ -33,7 +36,60 @@ export default function DestinationScreen(props) {
         </TouchableOpacity>
       </SafeAreaView>
 
+      {/* Titulo - Descricao*/}
+      <View style={styles.container}>
+        <ScrollView style={styles.scroll}
+        showsVerticalScrollIndicator={false}>
+          <View style={styles.header}>
+            <Text style={styles.title}>
+              {item?.title}
+            </Text>
+            <Text style={styles.price}>
+              $ {item?.price}
+            </Text>
+          </View>
+          <Text style={styles.description}>
+            {item?.longDescription}
+          </Text>
 
+          <View style={styles.container_info}>
+            <View style={styles.info}>
+              <ClockIcon size={wp(7)} color='skyblue'/>
+              <View style={{display: 'flex'}}>
+                <Text style={styles.info_icon}>
+                  {item.duration}
+                </Text>
+                <Text style={styles.info_text}>
+                  Duração
+                </Text>
+              </View>
+            </View>
+            <View style={styles.info}>
+              <MapPinIcon size={wp(7)} color='#f87171'/>
+              <View style={{display: 'flex'}}>
+                <Text style={styles.info_icon}>
+                  {item.distance}
+                </Text>
+                <Text style={styles.info_text}>
+                  Distância
+                </Text>
+              </View>
+            </View>
+            <View style={styles.info}>
+              <SunIcon size={wp(7)} color='orange'/>
+              <View style={{display: 'flex'}}>
+                <Text style={styles.info_icon}>
+                  {item.weather}
+                </Text>
+                <Text style={styles.info_text}>
+                  Temperatura
+                </Text>
+              </View>
+            </View>
+          </View>
+
+        </ScrollView>
+      </View>
     </View>
   )
 }
