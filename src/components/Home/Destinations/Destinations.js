@@ -7,14 +7,16 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import styles from './DestinationsStyles'
 import { destinationData } from '../../../constants'
 import { HeartIcon } from 'react-native-heroicons/outline';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Destinations() {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       {
         destinationData.map((item, index) => {
           return (
-            <DestinationCard item={item} key={index} />
+            <DestinationCard navigation={navigation} item={item} key={index} />
           )
         })
       }
@@ -22,10 +24,11 @@ export default function Destinations() {
   )
 }
 
-const DestinationCard = ({item}) => {
+const DestinationCard = ({item, navigation}) => {
   const [isFavorite, toggleFavorite] = useState(false)
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card} 
+    onPress={() => navigation.navigate('Destination', {...item})}>
       <Image style={styles.card_image} source={item.image} />
       <LinearGradient
             colors={['transparent', 'rgba(0,0,0,0.8)']}
