@@ -6,7 +6,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 import styles from './DestinationsStyles'
 import { destinationData } from '../../../constants'
-import { HeartIcon } from 'react-native-heroicons/outline';
+import { HeartIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Destinations() {
@@ -39,7 +39,7 @@ const DestinationCard = ({item, navigation}) => {
 
       <TouchableOpacity onPress={() => toggleFavorite(!isFavorite)} style={styles.heart_icon}>
         <HeartIcon size={wp(5)} color = {isFavorite ? "red" : "white"} />
-      </TouchableOpacity>
+      </TouchableOpacity> 
 
       <Text style={styles.item_title}>{item.title}</Text>
       <Text style={styles.item_description}>{item.shortDescription}</Text>
