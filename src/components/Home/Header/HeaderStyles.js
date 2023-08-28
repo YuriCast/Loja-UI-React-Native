@@ -7,7 +7,8 @@ const HeaderStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 40
+        marginBottom: 40,
+        marginTop: 16
     },
     header_text:{
         fontSize: wp(7),

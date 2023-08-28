@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 const SearchBarStyles = StyleSheet.create({
     main:{
         marginHorizontal: 20,
-        marginBottom: 16
     },
     container:{
         flexDirection: 'row',

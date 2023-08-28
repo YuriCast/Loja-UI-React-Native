@@ -4,7 +4,8 @@ import { theme } from "../../../theme";
 
 const CategoriasStyles = StyleSheet.create({
     main:{
-        gap: 20
+        gap: 20,
+        marginTop: 16
     },
     container:{
         marginHorizontal: 20,
