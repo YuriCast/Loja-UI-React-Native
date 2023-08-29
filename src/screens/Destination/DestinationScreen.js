@@ -76,7 +76,7 @@ export default function DestinationScreen(props) {
               </View>
             </View>
             <View style={styles.info}>
-              <SunIcon size={wp(7)} color='orange'/>
+              <SunIcon size={wp(7)} color='orange' style={{marginRight: -24}}/>
               <View style={{display: 'flex'}}>
                 <Text style={styles.info_icon}>
                   {item.weather}
