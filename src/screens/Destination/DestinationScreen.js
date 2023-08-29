@@ -87,8 +87,12 @@ export default function DestinationScreen(props) {
               </View>
             </View>
           </View>
-
         </ScrollView>
+        <TouchableOpacity style={styles.reservar}>
+          <Text style={styles.reservar_text}>
+            Reservar agora
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   )

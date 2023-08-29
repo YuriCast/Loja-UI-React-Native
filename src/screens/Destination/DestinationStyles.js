@@ -92,6 +92,23 @@ const DestinationStyles = StyleSheet.create({
         marginTop: 6,
         textAlign: 'center'
     },
+    reservar:{
+        backgroundColor: theme.bg(0.7),
+        height: wp(15),
+        width: wp(50),
+        marginBottom: 32,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 100,
+    },
+    reservar_text:{
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: wp(5.5)
+    }
 })
 
 export default DestinationStyles
